@@ -1,7 +1,9 @@
 *** Settings ***
 Suite teardown      Close all browsers
-Resource            /root/tmp/resource/portal.robot
-Resource            /root/tmp/resource/XT.robot
+Resource             /root/tmp/traffic/resource/portal.robot
+Resource             /root/tmp/traffic/resource/XT.robot
+
+
 
 *** Variables ***
 ${system_ip}    10.102.2.3
