@@ -1,7 +1,7 @@
 *** Settings ***
-Suite teardown    Close all browsers
-Resource       /root/tmp/resource/portal.robot
-Resource       /root/tmp/resource/XT.robot
+Suite teardown      Close all browsers
+Resource            /root/tmp/resource/portal.robot
+Resource            /root/tmp/resource/XT.robot
 
 *** Test Cases ***
 1 |--->webRTC call
