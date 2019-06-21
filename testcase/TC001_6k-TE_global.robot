@@ -16,7 +16,7 @@ Resource       /root/tmp/resource/XT.robot
     Start XT call           10.102.4.86
 	
 4 |--->XT5000 become moderator
-    XT become moderator
+    XT become moderator     10.102.4.86
 
 5 |--->XT5000 lock meeting
     XT lock meeting         10.102.4.86         
