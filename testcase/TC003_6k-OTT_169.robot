@@ -1,14 +1,17 @@
 *** Settings ***
 Suite teardown    Close all browsers
-Resource       C:\\traffic\\Resource\\portal.robot
-Resource       C:\\traffic\\Resource\\Connect_8805001.robot
+Resource       /root/tmp/resource/portal.robot
+Resource       /root/tmp/resource/Connect_8805001.robot
 
 *** Test Cases ***
 webRTC call
     Start webRTC call       https://global-esg.avaya.com/portal/tenants/default/?ID=8805001***1&autojoin
     Start webRTC call 2     https://global-esg.avaya.com/portal/tenants/default/?ID=8805001***1&autojoin
     Start webRTC call 3     https://global-esg.avaya.com/portal/tenants/default/?ID=8805001***1&autojoin
-	 	
+
+Stop XT call
+    Stop XT call
+
 Start XT call
     Start XT86 call
 	

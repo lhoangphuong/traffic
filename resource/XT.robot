@@ -2,30 +2,15 @@
 Library     SSHLibrary
 
 *** Keywords ***
-Start XT86 call
-    Open Connection     10.102.4.86
+Start XT call
+    [Arguments]         ${XT_url}
+    Open Connection     ${XT_url}
     Login               atadmin      1234
     Write   AT[&IPV
 	Write	AT[&CD1868805001
     Sleep   2
 	Close All Connections
 	
-Start XT76 call
-    Open Connection     10.102.4.76
-    Login               atadmin      1234
-    Write   AT[&IPV
-	Write	AT[&CD1868805001
-    Sleep   2
-	Close All Connections
-
-Start XT17 call
-    Open Connection     10.102.4.17
-    Login               atadmin      1234
-    Write   AT[&IPV
-	Write	AT[&CD1868805001
-    Sleep   2
-	Close All Connections	
-
 XT5000 become moderator
     Open Connection     10.102.4.86
     Login               atadmin      1234
@@ -98,12 +83,12 @@ Stop XT call
     Sleep   2
 	Close All Connections
 	
-	Open Connection     10.102.4.17
-    Login               atadmin      1234
-    Write   AT[&IPV
-	Write	AT[&CH1
-    Sleep   2
-	Close All Connections
+	#Open Connection     10.102.4.17
+    #Login               atadmin      1234
+    #Write   AT[&IPV
+	#Write	AT[&CH1
+    #Sleep   2
+	#Close All Connections
 	
 Start SIP call
     Open Connection     10.103.2.145
