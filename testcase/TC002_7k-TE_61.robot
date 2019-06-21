@@ -4,23 +4,21 @@ Resource            /root/tmp/resource/portal.robot
 Resource            /root/tmp/resource/XT.robot
 
 *** Variables ***
-${system_ip}    10.102.2.3
-${vr_id}        8805001
+${system_ip}    10.103.3.61
+${vr_id}        4822222      
 
 *** Test Cases ***
 1 |--->webRTC call
-    Start webRTC call       https://global-esg.avaya.com/portal/tenants/default/?ID=8805001***1&autojoin
-    Start webRTC call 2     https://global-esg.avaya.com/portal/tenants/default/?ID=8805001***1&autojoin
-    Start webRTC call 3     https://global-esg.avaya.com/portal/tenants/default/?ID=8805001***1&autojoin
+    Start webRTC call       https://esg242-cuong.hcm.com/portal/tenants/default/?ID=4822222***1&autojoin
 
 2 |--->Stop XT call
     Stop XT call
 
-3 |--->XT 5000 call
+3 |--->XT5000 call
     Start XT call           10.102.4.86     ${vr_id}
 	
 4 |--->XT5000 become moderator
-    XT become moderator     10.102.4.86
+    XT become moderator     10.102.4.86     
 
 5 |--->XT5000 lock meeting
     XT lock meeting         10.102.4.86         

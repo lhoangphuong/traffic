@@ -3,11 +3,11 @@ Library     SSHLibrary
 
 *** Keywords ***
 Start XT call
-    [Arguments]         ${XT_url}
+    [Arguments]         ${XT_url}       ${vr_id}
     Open Connection     ${XT_url}
     Login               atadmin      1234
     Write   AT[&IPV
-	Write	AT[&CD1868805001
+	Write	AT[&CD186${vr_id}
     Sleep   2
 	Close All Connections
 	
@@ -88,9 +88,10 @@ Stop XT call
 	#Close All Connections
 	
 Start SIP call
+    [Arguments]         ${system}    ${vr_id}
     Open Connection     10.103.2.145
     Login               root        root
-    Write   cd /home/SiPp/480p30_1M_HP/; ./sipp 10.103.2.3 -s 8805001 -mi 10.103.2.145 -i 10.103.2.145 -sf test.xml -aa -r 1 -rp 1000 -l 5 -inf users.csv
+    Write   cd /home/SiPp/480p30_1M_HP/; ./sipp ${system} -s ${vr_id} -mi 10.103.2.145 -i 10.103.2.145 -sf test.xml -aa -r 1 -rp 1000 -l 5 -inf users.csv
     Sleep   60
     Write   qq
     Sleep   2
