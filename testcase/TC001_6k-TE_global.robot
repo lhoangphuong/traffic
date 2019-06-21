@@ -4,39 +4,39 @@ Resource       /root/tmp/resource/portal.robot
 Resource       /root/tmp/resource/XT.robot
 
 *** Test Cases ***
-webRTC call
+1 |--->webRTC call
     Start webRTC call       https://global-esg.avaya.com/portal/tenants/default/?ID=8805001***1&autojoin
     Start webRTC call 2     https://global-esg.avaya.com/portal/tenants/default/?ID=8805001***1&autojoin
     Start webRTC call 3     https://global-esg.avaya.com/portal/tenants/default/?ID=8805001***1&autojoin
 
-Stop XT call
+2 |--->Stop XT call
     Stop XT call
 
-XT 5000 call
+3 |--->XT 5000 call
     Start XT call           10.102.4.86
 	
-XT5000 become moderator
-    XT5000 become moderator
+4 |--->XT5000 become moderator
+    XT become moderator
 
-XT5000 lock meeting
-    XT5000 lock meeting
+5 |--->XT5000 lock meeting
+    XT lock meeting         10.102.4.86         
 
-XT 4300 call
+6 |--->XT 4300 call
     Start XT call           10.102.4.76
 
-XT 4300 request
-    XT4300 request
+7 |--->XT 4300 request
+    XT request              10.102.4.76
     
-XT5000 accept
-    XT5000 accept
+8 |--->XT5000 accept
+    XT accept               10.102.4.86
 
-XT5000 unlock meeting
-    XT5000 lock meeting
+9 |--->XT5000 unlock meeting
+    XT lock meeting         10.102.4.56
 
-Start SIP call
+10|--->Start SIP call
     Start SIP call
 
-XT5000 terminate meeting
-    XT5000 terminate meeting
+11|--->XT5000 terminate meeting
+    XT terminate meeting    10.102.4.86
   	
 

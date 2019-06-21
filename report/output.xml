@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190621 09:17:23.103" generator="Robot 3.1.1 (Python 2.7.15rc1 on linux2)">
+<suite source="/root/tmp/testcase/TC001_7k-TE_global.robot" id="s1" name="TC001 7k-TE global">
+<test id="s1-t1" name="webRTC call">
+<kw name="Start webRTC call" library="portal">
+<arguments>
+<arg>https://global-esg.avaya.com/portal/tenants/default/?ID=8805001***1&amp;autojoin</arg>
+</arguments>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>--use-fake-ui-for-media-stream --use-fake-device-for-media-stream --use-file-for-fake-video-capture=C:\\Video\\sintel_trailer_2k_480p24.y4m</arg>
+</arguments>
+<assign>
+<var>${list}</var>
+</assign>
+<msg timestamp="20190621 09:17:23.250" level="INFO">${list} = [u'--use-fake-ui-for-media-stream --use-fake-device-for-media-stream --use-file-for-fake-video-capture=C:\\Video\\sintel_trailer_2k_480p24.y4m']</msg>
+<status status="PASS" endtime="20190621 09:17:23.250" starttime="20190621 09:17:23.250"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>args=${list}</arg>
+</arguments>
+<assign>
+<var>${args}</var>
+</assign>
+<msg timestamp="20190621 09:17:23.251" level="INFO">${args} = {u'args': [u'--use-fake-ui-for-media-stream --use-fake-device-for-media-stream --use-file-for-fake-video-capture=C:\\Video\\sintel_trailer_2k_480p24.y4m']}</msg>
+<status status="PASS" endtime="20190621 09:17:23.251" starttime="20190621 09:17:23.250"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>chromeOptions=${args}</arg>
+</arguments>
+<assign>
+<var>${desired caps}</var>
+</assign>
+<msg timestamp="20190621 09:17:23.251" level="INFO">${desired caps} = {u'chromeOptions': {u'args': [u'--use-fake-ui-for-media-stream --use-fake-device-for-media-stream --use-file-for-fake-video-capture=C:\\Video\\sintel_trailer_2k_480p24.y4m']}}</msg>
+<status status="PASS" endtime="20190621 09:17:23.251" starttime="20190621 09:17:23.251"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${Portal_url}</arg>
+<arg>chrome</arg>
+<arg>none</arg>
+<arg>http://localhost:4444/wd/hub</arg>
+<arg>desired_capabilities=${desired caps}</arg>
+</arguments>
+<msg timestamp="20190621 09:17:23.252" level="INFO">Opening browser 'chrome' to base url 'https://global-esg.avaya.com/portal/tenants/default/?ID=8805001***1&amp;autojoin' through remote server at 'http://localhost:4444/wd/hub'.</msg>
+<status status="PASS" endtime="20190621 09:17:25.923" starttime="20190621 09:17:23.251"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20190621 09:17:28.925" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190621 09:17:28.925" starttime="20190621 09:17:25.924"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>Phim</arg>
+</arguments>
+<msg timestamp="20190621 09:17:28.929" level="INFO">Sending key(s) (u'Phim',) to page.</msg>
+<msg timestamp="20190621 09:17:28.929" level="INFO">Sending keys Phim</msg>
+<status status="PASS" endtime="20190621 09:17:28.990" starttime="20190621 09:17:28.926"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>ENTER</arg>
+</arguments>
+<msg timestamp="20190621 09:17:28.991" level="INFO">Sending key(s) (u'ENTER',) to page.</msg>
+<msg timestamp="20190621 09:17:28.991" level="INFO">Pressing special key ENTER to browser.</msg>
+<status status="PASS" endtime="20190621 09:17:29.009" starttime="20190621 09:17:28.990"></status>
+</kw>
+<status status="PASS" endtime="20190621 09:17:29.009" starttime="20190621 09:17:23.249"></status>
+</kw>
+<kw name="Start webRTC call 2" library="portal">
+<arguments>
+<arg>https://global-esg.avaya.com/portal/tenants/default/?ID=8805001***1&amp;autojoin</arg>
+</arguments>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>--use-fake-ui-for-media-stream --use-fake-device-for-media-stream --use-file-for-fake-video-capture=C:\\Video\\bowing_qcif.y4m</arg>
+</arguments>
+<assign>
+<var>${list}</var>
+</assign>
+<msg timestamp="20190621 09:17:29.010" level="INFO">${list} = [u'--use-fake-ui-for-media-stream --use-fake-device-for-media-stream --use-file-for-fake-video-capture=C:\\Video\\bowing_qcif.y4m']</msg>
+<status status="PASS" endtime="20190621 09:17:29.010" starttime="20190621 09:17:29.009"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>args=${list}</arg>
+</arguments>
+<assign>
+<var>${args}</var>
+</assign>
+<msg timestamp="20190621 09:17:29.010" level="INFO">${args} = {u'args': [u'--use-fake-ui-for-media-stream --use-fake-device-for-media-stream --use-file-for-fake-video-capture=C:\\Video\\bowing_qcif.y4m']}</msg>
+<status status="PASS" endtime="20190621 09:17:29.010" starttime="20190621 09:17:29.010"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>chromeOptions=${args}</arg>
+</arguments>
+<assign>
+<var>${desired caps}</var>
+</assign>
+<msg timestamp="20190621 09:17:29.011" level="INFO">${desired caps} = {u'chromeOptions': {u'args': [u'--use-fake-ui-for-media-stream --use-fake-device-for-media-stream --use-file-for-fake-video-capture=C:\\Video\\bowing_qcif.y4m']}}</msg>
+<status status="PASS" endtime="20190621 09:17:29.011" starttime="20190621 09:17:29.010"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${Portal_url}</arg>
+<arg>chrome</arg>
+<arg>none</arg>
+<arg>http://localhost:4444/wd/hub</arg>
+<arg>desired_capabilities=${desired caps}</arg>
+</arguments>
+<msg timestamp="20190621 09:17:29.011" level="INFO">Opening browser 'chrome' to base url 'https://global-esg.avaya.com/portal/tenants/default/?ID=8805001***1&amp;autojoin' through remote server at 'http://localhost:4444/wd/hub'.</msg>
+<status status="PASS" endtime="20190621 09:17:31.668" starttime="20190621 09:17:29.011"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20190621 09:17:34.671" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190621 09:17:34.671" starttime="20190621 09:17:31.670"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>Cui chao</arg>
+</arguments>
+<msg timestamp="20190621 09:17:34.674" level="INFO">Sending key(s) (u'Cui chao',) to page.</msg>
+<msg timestamp="20190621 09:17:34.675" level="INFO">Sending keys Cui chao</msg>
+<status status="PASS" endtime="20190621 09:17:34.785" starttime="20190621 09:17:34.672"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>ENTER</arg>
+</arguments>
+<msg timestamp="20190621 09:17:34.787" level="INFO">Sending key(s) (u'ENTER',) to page.</msg>
+<msg timestamp="20190621 09:17:34.788" level="INFO">Pressing special key ENTER to browser.</msg>
+<status status="PASS" endtime="20190621 09:17:34.813" starttime="20190621 09:17:34.785"></status>
+</kw>
+<status status="PASS" endtime="20190621 09:17:34.813" starttime="20190621 09:17:29.009"></status>
+</kw>
+<kw name="Start webRTC call 3" library="portal">
+<arguments>
+<arg>https://global-esg.avaya.com/portal/tenants/default/?ID=8805001***1&amp;autojoin</arg>
+</arguments>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>--use-fake-ui-for-media-stream --use-fake-device-for-media-stream --use-file-for-fake-video-capture=C:\\Video\\ducks_take_off_1080p50.y4m</arg>
+</arguments>
+<assign>
+<var>${list}</var>
+</assign>
+<msg timestamp="20190621 09:17:34.814" level="INFO">${list} = [u'--use-fake-ui-for-media-stream --use-fake-device-for-media-stream --use-file-for-fake-video-capture=C:\\Video\\ducks_take_off_1080p50.y4m']</msg>
+<status status="PASS" endtime="20190621 09:17:34.814" starttime="20190621 09:17:34.814"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>args=${list}</arg>
+</arguments>
+<assign>
+<var>${args}</var>
+</assign>
+<msg timestamp="20190621 09:17:34.815" level="INFO">${args} = {u'args': [u'--use-fake-ui-for-media-stream --use-fake-device-for-media-stream --use-file-for-fake-video-capture=C:\\Video\\ducks_take_off_1080p50.y4m']}</msg>
+<status status="PASS" endtime="20190621 09:17:34.815" starttime="20190621 09:17:34.814"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>chromeOptions=${args}</arg>
+</arguments>
+<assign>
+<var>${desired caps}</var>
+</assign>
+<msg timestamp="20190621 09:17:34.815" level="INFO">${desired caps} = {u'chromeOptions': {u'args': [u'--use-fake-ui-for-media-stream --use-fake-device-for-media-stream --use-file-for-fake-video-capture=C:\\Video\\ducks_take_off_1080p50.y4m']}}</msg>
+<status status="PASS" endtime="20190621 09:17:34.815" starttime="20190621 09:17:34.815"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${Portal_url}</arg>
+<arg>chrome</arg>
+<arg>none</arg>
+<arg>http://localhost:4444/wd/hub</arg>
+<arg>desired_capabilities=${desired caps}</arg>
+</arguments>
+<msg timestamp="20190621 09:17:34.816" level="INFO">Opening browser 'chrome' to base url 'https://global-esg.avaya.com/portal/tenants/default/?ID=8805001***1&amp;autojoin' through remote server at 'http://localhost:4444/wd/hub'.</msg>
+<status status="PASS" endtime="20190621 09:17:37.485" starttime="20190621 09:17:34.816"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20190621 09:17:40.487" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20190621 09:17:40.488" starttime="20190621 09:17:37.486"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>May Con Vit</arg>
+</arguments>
+<msg timestamp="20190621 09:17:40.490" level="INFO">Sending key(s) (u'May Con Vit',) to page.</msg>
+<msg timestamp="20190621 09:17:40.491" level="INFO">Sending keys May Con Vit</msg>
+<status status="PASS" endtime="20190621 09:17:40.611" starttime="20190621 09:17:40.488"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>ENTER</arg>
+</arguments>
+<msg timestamp="20190621 09:17:40.612" level="INFO">Sending key(s) (u'ENTER',) to page.</msg>
+<msg timestamp="20190621 09:17:40.613" level="INFO">Pressing special key ENTER to browser.</msg>
+<status status="PASS" endtime="20190621 09:17:40.634" starttime="20190621 09:17:40.611"></status>
+</kw>
+<status status="PASS" endtime="20190621 09:17:40.635" starttime="20190621 09:17:34.813"></status>
+</kw>
+<status status="PASS" endtime="20190621 09:17:40.635" critical="yes" starttime="20190621 09:17:23.248"></status>
+</test>
+<test id="s1-t2" name="Stop XT call">
+<kw name="Stop XT call" library="XT">
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<arguments>
+<arg>10.102.4.86</arg>
+</arguments>
+<status status="PASS" endtime="20190621 09:17:40.638" starttime="20190621 09:17:40.638"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<arguments>
+<arg>atadmin</arg>
+<arg>1234</arg>
+</arguments>
+<msg timestamp="20190621 09:17:40.639" level="INFO">Logging into '10.102.4.86:22' as 'atadmin'.</msg>
+<msg timestamp="20190621 09:17:47.155" level="INFO">Read output: Last login: Fri Jun 21 16:17:13 2019 from 10.128.224.44
+
+
+=============================================================================
+-atsh-0.0.1
+=============================================================================
+ATSH&gt;</msg>
+<status status="PASS" endtime="20190621 09:17:47.155" starttime="20190621 09:17:40.638"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;IPV</arg>
+</arguments>
+<msg timestamp="20190621 09:17:47.166" level="INFO">AT[&amp;IPV</msg>
+<status status="PASS" endtime="20190621 09:17:47.166" starttime="20190621 09:17:47.155"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CH1</arg>
+</arguments>
+<msg timestamp="20190621 09:17:47.167" level="INFO">ATSH&gt; AT[&lt;IP401C9XT5000-09.02.00.0215</msg>
+<status status="PASS" endtime="20190621 09:17:47.167" starttime="20190621 09:17:47.166"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190621 09:17:49.168" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190621 09:17:49.168" starttime="20190621 09:17:47.167"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20190621 09:17:49.233" starttime="20190621 09:17:49.168"></status>
+</kw>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<arguments>
+<arg>10.102.4.76</arg>
+</arguments>
+<status status="PASS" endtime="20190621 09:17:49.234" starttime="20190621 09:17:49.233"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<arguments>
+<arg>atadmin</arg>
+<arg>1234</arg>
+</arguments>
+<msg timestamp="20190621 09:17:49.235" level="INFO">Logging into '10.102.4.76:22' as 'atadmin'.</msg>
+<msg timestamp="20190621 09:17:55.502" level="INFO">Read output: Last login: Fri Jun 21 16:16:10 2019 from 10.128.224.44
+
+
+=============================================================================
+-atsh-0.0.1
+=============================================================================
+ATSH&gt;</msg>
+<status status="PASS" endtime="20190621 09:17:55.502" starttime="20190621 09:17:49.234"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;IPV</arg>
+</arguments>
+<msg timestamp="20190621 09:17:55.513" level="INFO">AT[&amp;IPV</msg>
+<status status="PASS" endtime="20190621 09:17:55.513" starttime="20190621 09:17:55.502"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CH1</arg>
+</arguments>
+<msg timestamp="20190621 09:17:55.514" level="INFO">ATSH&gt; AT[&lt;IP401C9XT5000-09.02.00.0215</msg>
+<status status="PASS" endtime="20190621 09:17:55.514" starttime="20190621 09:17:55.514"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190621 09:17:57.515" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190621 09:17:57.515" starttime="20190621 09:17:55.514"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20190621 09:17:57.580" starttime="20190621 09:17:57.515"></status>
+</kw>
+<status status="PASS" endtime="20190621 09:17:57.581" starttime="20190621 09:17:40.638"></status>
+</kw>
+<status status="PASS" endtime="20190621 09:17:57.581" critical="yes" starttime="20190621 09:17:40.636"></status>
+</test>
+<test id="s1-t3" name="XT 5000 call">
+<kw name="Start XT call" library="XT">
+<arguments>
+<arg>10.102.4.86</arg>
+</arguments>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<arguments>
+<arg>${XT_url}</arg>
+</arguments>
+<status status="PASS" endtime="20190621 09:17:57.584" starttime="20190621 09:17:57.583"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<arguments>
+<arg>atadmin</arg>
+<arg>1234</arg>
+</arguments>
+<msg timestamp="20190621 09:17:57.584" level="INFO">Logging into '10.102.4.86:22' as 'atadmin'.</msg>
+<msg timestamp="20190621 09:18:03.781" level="INFO">Read output: Last login: Fri Jun 21 16:17:45 2019 from 10.128.224.44
+
+
+=============================================================================
+-atsh-0.0.1
+=============================================================================
+ATSH&gt;</msg>
+<status status="PASS" endtime="20190621 09:18:03.781" starttime="20190621 09:17:57.584"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;IPV</arg>
+</arguments>
+<msg timestamp="20190621 09:18:03.793" level="INFO">AT[&amp;IPV</msg>
+<status status="PASS" endtime="20190621 09:18:03.793" starttime="20190621 09:18:03.781"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CD1868805001</arg>
+</arguments>
+<msg timestamp="20190621 09:18:03.794" level="INFO">ATSH&gt; AT[&lt;IP401C9XT5000-09.02.00.0215</msg>
+<status status="PASS" endtime="20190621 09:18:03.794" starttime="20190621 09:18:03.793"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190621 09:18:05.795" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190621 09:18:05.795" starttime="20190621 09:18:03.794"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20190621 09:18:05.860" starttime="20190621 09:18:05.795"></status>
+</kw>
+<status status="PASS" endtime="20190621 09:18:05.860" starttime="20190621 09:17:57.583"></status>
+</kw>
+<status status="PASS" endtime="20190621 09:18:05.860" critical="yes" starttime="20190621 09:17:57.582"></status>
+</test>
+<test id="s1-t4" name="XT5000 become moderator">
+<kw name="XT5000 become moderator">
+<msg timestamp="20190621 09:18:05.866" level="FAIL">No keyword with name 'XT5000 become moderator' found. Did you mean:
+    XT.XT Become Moderator</msg>
+<status status="FAIL" endtime="20190621 09:18:05.866" starttime="20190621 09:18:05.866"></status>
+</kw>
+<status status="FAIL" endtime="20190621 09:18:05.866" critical="yes" starttime="20190621 09:18:05.861">No keyword with name 'XT5000 become moderator' found. Did you mean:
+    XT.XT Become Moderator</status>
+</test>
+<test id="s1-t5" name="XT5000 lock meeting">
+<kw name="XT5000 lock meeting">
+<msg timestamp="20190621 09:18:05.872" level="FAIL">No keyword with name 'XT5000 lock meeting' found. Did you mean:
+    XT.XT Lock Meeting</msg>
+<status status="FAIL" endtime="20190621 09:18:05.872" starttime="20190621 09:18:05.871"></status>
+</kw>
+<status status="FAIL" endtime="20190621 09:18:05.872" critical="yes" starttime="20190621 09:18:05.866">No keyword with name 'XT5000 lock meeting' found. Did you mean:
+    XT.XT Lock Meeting</status>
+</test>
+<test id="s1-t6" name="XT 4300 call">
+<kw name="Start XT call" library="XT">
+<arguments>
+<arg>10.102.4.76</arg>
+</arguments>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<arguments>
+<arg>${XT_url}</arg>
+</arguments>
+<status status="PASS" endtime="20190621 09:18:05.873" starttime="20190621 09:18:05.873"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<arguments>
+<arg>atadmin</arg>
+<arg>1234</arg>
+</arguments>
+<msg timestamp="20190621 09:18:05.874" level="INFO">Logging into '10.102.4.76:22' as 'atadmin'.</msg>
+<msg timestamp="20190621 09:18:12.057" level="INFO">Read output: Last login: Fri Jun 21 16:18:19 2019 from 10.128.224.44
+
+
+=============================================================================
+-atsh-0.0.1
+=============================================================================
+ATSH&gt;</msg>
+<status status="PASS" endtime="20190621 09:18:12.057" starttime="20190621 09:18:05.873"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;IPV</arg>
+</arguments>
+<msg timestamp="20190621 09:18:12.068" level="INFO">AT[&amp;IPV</msg>
+<status status="PASS" endtime="20190621 09:18:12.069" starttime="20190621 09:18:12.057"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CD1868805001</arg>
+</arguments>
+<msg timestamp="20190621 09:18:12.070" level="INFO">ATSH&gt; AT[&lt;IP401C9XT5000-09.02.00.0215</msg>
+<status status="PASS" endtime="20190621 09:18:12.070" starttime="20190621 09:18:12.069"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190621 09:18:14.070" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190621 09:18:14.070" starttime="20190621 09:18:12.070"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20190621 09:18:14.103" starttime="20190621 09:18:14.071"></status>
+</kw>
+<status status="PASS" endtime="20190621 09:18:14.104" starttime="20190621 09:18:05.873"></status>
+</kw>
+<status status="PASS" endtime="20190621 09:18:14.104" critical="yes" starttime="20190621 09:18:05.872"></status>
+</test>
+<test id="s1-t7" name="XT 4300 request">
+<kw name="XT4300 request">
+<msg timestamp="20190621 09:18:14.112" level="FAIL">No keyword with name 'XT4300 request' found.</msg>
+<status status="FAIL" endtime="20190621 09:18:14.112" starttime="20190621 09:18:14.112"></status>
+</kw>
+<status status="FAIL" endtime="20190621 09:18:14.112" critical="yes" starttime="20190621 09:18:14.104">No keyword with name 'XT4300 request' found.</status>
+</test>
+<test id="s1-t8" name="XT5000 accept">
+<kw name="XT5000 accept">
+<msg timestamp="20190621 09:18:14.119" level="FAIL">No keyword with name 'XT5000 accept' found.</msg>
+<status status="FAIL" endtime="20190621 09:18:14.119" starttime="20190621 09:18:14.119"></status>
+</kw>
+<status status="FAIL" endtime="20190621 09:18:14.119" critical="yes" starttime="20190621 09:18:14.113">No keyword with name 'XT5000 accept' found.</status>
+</test>
+<test id="s1-t9" name="XT5000 unlock meeting">
+<kw name="XT5000 lock meeting">
+<msg timestamp="20190621 09:18:14.125" level="FAIL">No keyword with name 'XT5000 lock meeting' found. Did you mean:
+    XT.XT Lock Meeting</msg>
+<status status="FAIL" endtime="20190621 09:18:14.125" starttime="20190621 09:18:14.125"></status>
+</kw>
+<status status="FAIL" endtime="20190621 09:18:14.125" critical="yes" starttime="20190621 09:18:14.120">No keyword with name 'XT5000 lock meeting' found. Did you mean:
+    XT.XT Lock Meeting</status>
+</test>
+<test id="s1-t10" name="Start SIP call">
+<kw name="Start SIP call" library="XT">
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<arguments>
+<arg>10.103.2.145</arg>
+</arguments>
+<status status="PASS" endtime="20190621 09:18:14.127" starttime="20190621 09:18:14.126"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<arguments>
+<arg>root</arg>
+<arg>root</arg>
+</arguments>
+<msg timestamp="20190621 09:18:14.128" level="INFO">Logging into '10.103.2.145:22' as 'root'.</msg>
+<msg timestamp="20190621 09:18:15.260" level="INFO">Read output: Last login: Fri Jun 21 12:08:07 2019 from 10.128.224.44
+[1mlinux:~ # [m</msg>
+<status status="PASS" endtime="20190621 09:18:15.260" starttime="20190621 09:18:14.127"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>cd /home/SiPp/480p30_1M_HP/; ./sipp 10.103.2.3 -s 8805001 -mi 10.103.2.145 -i 10.103.2.145 -sf test.xml -aa -r 1 -rp 1000 -l 5 -inf users.csv</arg>
+</arguments>
+<msg timestamp="20190621 09:18:15.272" level="INFO">cd /home/SiPp/480p30_1M_HP/; ./sipp 10.103.2.3 -s 8805001 -mi 10.103.2 .145 -i 10.103.2.145 -sf test.xml -aa -r 1 -rp 1000 -l 5 -inf users.csv</msg>
+<status status="PASS" endtime="20190621 09:18:15.272" starttime="20190621 09:18:15.260"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>60</arg>
+</arguments>
+<msg timestamp="20190621 09:19:15.273" level="INFO">Slept 1 minute</msg>
+<status status="PASS" endtime="20190621 09:19:15.273" starttime="20190621 09:18:15.272"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>qq</arg>
+</arguments>
+<msg timestamp="20190621 09:19:15.274" level="INFO">In pcap Audio_720p30_4M_G711.pcap, npkts 32044</msg>
+<status status="PASS" endtime="20190621 09:19:15.274" starttime="20190621 09:19:15.273"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190621 09:19:17.275" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190621 09:19:17.275" starttime="20190621 09:19:15.274"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20190621 09:19:17.307" starttime="20190621 09:19:17.275"></status>
+</kw>
+<status status="PASS" endtime="20190621 09:19:17.308" starttime="20190621 09:18:14.126"></status>
+</kw>
+<status status="PASS" endtime="20190621 09:19:17.308" critical="yes" starttime="20190621 09:18:14.126"></status>
+</test>
+<test id="s1-t11" name="XT5000 terminate meeting">
+<kw name="XT5000 terminate meeting">
+<msg timestamp="20190621 09:19:17.314" level="FAIL">No keyword with name 'XT5000 terminate meeting' found. Did you mean:
+    XT.XT Terminate Meeting</msg>
+<status status="FAIL" endtime="20190621 09:19:17.314" starttime="20190621 09:19:17.314"></status>
+</kw>
+<status status="FAIL" endtime="20190621 09:19:17.314" critical="yes" starttime="20190621 09:19:17.308">No keyword with name 'XT5000 terminate meeting' found. Did you mean:
+    XT.XT Terminate Meeting</status>
+</test>
+<kw type="teardown" name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20190621 09:19:19.095" starttime="20190621 09:19:17.315"></status>
+</kw>
+<status status="FAIL" endtime="20190621 09:19:19.095" starttime="20190621 09:17:23.104"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="6" pass="5">Critical Tests</stat>
+<stat fail="6" pass="5">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="6" id="s1" name="TC001 7k-TE global" pass="5">TC001 7k-TE global</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

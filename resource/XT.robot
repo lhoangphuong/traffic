@@ -11,8 +11,9 @@ Start XT call
     Sleep   2
 	Close All Connections
 	
-XT5000 become moderator
-    Open Connection     10.102.4.86
+XT become moderator
+    [Arguments]         ${XT_url}
+    Open Connection     ${XT_url}
     Login               atadmin      1234
     Write   AT[&IPV
 	Write	AT[&CF*
@@ -24,8 +25,9 @@ XT5000 become moderator
     Sleep   2
 	Close All Connections
 
-XT5000 terminate meeting
-    Open Connection     10.102.4.86
+XT terminate meeting
+    [Arguments]         ${XT_url}
+    Open Connection     ${XT_url}
     Login               atadmin      1234
     Write   AT[&IPV
 	Write	AT[&CF*
@@ -34,8 +36,9 @@ XT5000 terminate meeting
     Sleep   2
 	Close All Connections
 
-XT5000 lock meeting
-    Open Connection     10.102.4.86
+XT lock meeting
+    [Arguments]         ${XT_url}
+    Open Connection     ${XT_url}
     Login               atadmin      1234
     Write   AT[&IPV
 	Write	AT[&CF*
@@ -44,24 +47,18 @@ XT5000 lock meeting
     Sleep   2
 	Close All Connections
 
-XT4300 request
-    Open Connection     10.102.4.76
+XT request
+    [Arguments]         ${XT_url}
+    Open Connection     ${XT_url}
     Login               atadmin      1234
     Write   AT[&IPV
 	Write	AT[&CF#
     Sleep   2
 	Close All Connections
 
-XT7000 request
-    Open Connection     10.102.4.17
-    Login               atadmin      1234
-    Write   AT[&IPV
-	Write	AT[&CF#
-    Sleep   2
-	Close All Connections
-
-XT5000 accept
-    Open Connection     10.102.4.86
+XT accept
+    [Arguments]         ${XT_url}
+    Open Connection     ${XT_url}
     Login               atadmin      1234
     Write   AT[&IPV
 	Write	AT[&CF*
