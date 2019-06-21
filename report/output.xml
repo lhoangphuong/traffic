@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190614 11:03:15.443" generator="Robot 3.1.1 (Python 2.7.15rc1 on linux2)">
+<suite source="/root/tmp/testcase/testcase.robot" id="s1" name="Testcase">
+<test id="s1-t1" name="1 |---&gt;Search google">
+<kw name="Search google" library="sample">
+<arguments>
+<arg>robot framework</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://www.google.com/</arg>
+<arg>chrome</arg>
+<arg>none</arg>
+<arg>http://localhost:4444/wd/hub</arg>
+</arguments>
+<msg timestamp="20190614 11:03:15.534" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/' through remote server at 'http://localhost:4444/wd/hub'.</msg>
+<status status="PASS" endtime="20190614 11:03:21.494" starttime="20190614 11:03:15.534"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20190614 11:03:22.622" starttime="20190614 11:03:21.494"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=q</arg>
+<arg>${Keywords}</arg>
+</arguments>
+<msg timestamp="20190614 11:03:22.622" level="INFO">Typing text 'robot framework' into text field 'name=q'.</msg>
+<status status="PASS" endtime="20190614 11:03:22.790" starttime="20190614 11:03:22.622"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>ENTER</arg>
+</arguments>
+<msg timestamp="20190614 11:03:22.792" level="INFO">Sending key(s) (u'ENTER',) to page.</msg>
+<msg timestamp="20190614 11:03:22.792" level="INFO">Pressing special key ENTER to browser.</msg>
+<status status="PASS" endtime="20190614 11:03:26.189" starttime="20190614 11:03:22.791"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>Robot Framework</arg>
+</arguments>
+<msg timestamp="20190614 11:03:26.189" level="INFO">Clicking link 'Robot Framework'.</msg>
+<status status="PASS" endtime="20190614 11:03:31.429" starttime="20190614 11:03:26.189"></status>
+</kw>
+<status status="PASS" endtime="20190614 11:03:31.429" starttime="20190614 11:03:15.533"></status>
+</kw>
+<doc>Search a keyword with google</doc>
+<status status="PASS" endtime="20190614 11:03:31.430" critical="yes" starttime="20190614 11:03:15.533"></status>
+</test>
+<test id="s1-t2" name="2 |---&gt;Search images">
+<kw name="Seach image" library="sample">
+<arguments>
+<arg>cute cat</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://www.google.com/</arg>
+<arg>chrome</arg>
+<arg>none</arg>
+<arg>http://localhost:4444/wd/hub</arg>
+</arguments>
+<msg timestamp="20190614 11:03:31.432" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/' through remote server at 'http://localhost:4444/wd/hub'.</msg>
+<status status="PASS" endtime="20190614 11:03:37.874" starttime="20190614 11:03:31.431"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20190614 11:03:39.004" starttime="20190614 11:03:37.875"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=q</arg>
+<arg>${Keywords}</arg>
+</arguments>
+<msg timestamp="20190614 11:03:39.005" level="INFO">Typing text 'cute cat' into text field 'name=q'.</msg>
+<status status="PASS" endtime="20190614 11:03:39.147" starttime="20190614 11:03:39.005"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>ENTER</arg>
+</arguments>
+<msg timestamp="20190614 11:03:39.149" level="INFO">Sending key(s) (u'ENTER',) to page.</msg>
+<msg timestamp="20190614 11:03:39.149" level="INFO">Pressing special key ENTER to browser.</msg>
+<status status="PASS" endtime="20190614 11:03:41.422" starttime="20190614 11:03:39.147"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>css=#hdtb-msb-vis &gt; div:nth-child(2) &gt; a</arg>
+</arguments>
+<msg timestamp="20190614 11:03:41.423" level="INFO">Clicking element 'css=#hdtb-msb-vis &gt; div:nth-child(2) &gt; a'.</msg>
+<status status="PASS" endtime="20190614 11:03:45.635" starttime="20190614 11:03:41.422"></status>
+</kw>
+<status status="PASS" endtime="20190614 11:03:45.635" starttime="20190614 11:03:31.431"></status>
+</kw>
+<doc>Search a keyword with google</doc>
+<status status="PASS" endtime="20190614 11:03:45.636" critical="yes" starttime="20190614 11:03:31.431"></status>
+</test>
+<kw type="teardown" name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20190614 11:03:46.484" starttime="20190614 11:03:45.637"></status>
+</kw>
+<status status="PASS" endtime="20190614 11:03:46.484" starttime="20190614 11:03:15.444"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Testcase" pass="2">Testcase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
