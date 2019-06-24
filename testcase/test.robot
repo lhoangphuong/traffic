@@ -5,4 +5,4 @@ Resource            /root/tmp/resource/XT.robot
 
 *** Test Cases ***
 10  |--->Start SIP call
-    Start SIP call          10.103.3.61     4822222
+    Start SIP call          10.103.2.3     8805001
