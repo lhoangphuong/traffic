@@ -1,8 +1,8 @@
 *** Settings ***
 Suite teardown       Close all browsers
-Resource             /root/tmp/traffic/resource/portal.robot
-Resource             /root/tmp/traffic/resource/iview.robot
-Resource             /root/tmp/traffic/resource/sample.robot
+Resource             /root/tmp/resource/portal.robot
+Resource             /root/tmp/resource/iview.robot
+Resource             /root/tmp/resource/sample.robot
 
 *** Test Cases ***
 1 |--->Search google

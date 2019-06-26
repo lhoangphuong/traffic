@@ -10,19 +10,20 @@ Start XT call
 	Write	AT[&CD186${vr_id}
     Sleep   2
 	Close All Connections
-	
+
 XT become moderator
     [Arguments]         ${XT_url}
     Open Connection     ${XT_url}
     Login               atadmin      1234
     Write   AT[&IPV
 	Write	AT[&CF*
+    Sleep   1
     Write	AT[&CF1
     Write	AT[&CF1
     Write	AT[&CF#
-    Sleep   2
+    Sleep   1
     Write	AT[&CF#
-    Sleep   2
+    Sleep   1
 	Close All Connections
 
 XT terminate meeting
@@ -88,11 +89,11 @@ Stop XT call
 	#Close All Connections
 	
 Start SIP call
-    [Arguments]         ${system}    ${vr_id}
+    [Arguments]         ${system}    ${vr_id}   ${number of call}
     Open Connection     10.103.2.145
     Login               root        root
-    Write   cd /home/SiPp/480p30_1M_HP/; ./sipp ${system} -s ${vr_id} -mi 10.103.2.145 -i 10.103.2.145 -sf test.xml -aa -r 1 -rp 1000 -l 5 -inf users.csv
-    Sleep   60
+    Write   cd /home/SiPp/720p_2M/; ./sipp ${system} -s ${vr_id} -mi 10.103.2.145 -i 10.103.2.145 -sf test.xml -aa -r 1 -rp 1000 -l ${number of call} -inf users.csv
+    Sleep   30
     Write   qq
     Sleep   2
     Close All Connections
