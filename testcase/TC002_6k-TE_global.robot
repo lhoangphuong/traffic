@@ -22,6 +22,9 @@ ${vr_id}        8805001
 4 |--->XT5000 become moderator
     XT become moderator     10.102.4.86
 
+5 |--->Moderator Invite CU360
+    Invite CU360            10.102.4.86
+
 5 |--->XT5000 lock meeting
     XT lock meeting         10.102.4.86
 

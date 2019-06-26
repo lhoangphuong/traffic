@@ -26,6 +26,27 @@ XT become moderator
     Sleep   1
 	Close All Connections
 
+Invite CU360
+    [Arguments]         ${XT_url}
+    Open Connection     ${XT_url}
+    Login               atadmin      1234
+    Write   AT[&IPV
+	Write	AT[&CF*
+    Sleep   1
+     Write	AT[&CF8
+    Write	AT[&CF2
+    Write	AT[&CF2
+    Write	AT[&CF0
+    Write	AT[&CF2
+    Write	AT[&CF1
+    Write	AT[&CF3
+    Write	AT[&CF5
+    Write	AT[&CF#
+    Sleep   1
+    Write	AT[&CF#
+    Sleep   1
+	Close All Connections
+
 XT terminate meeting
     [Arguments]         ${XT_url}
     Open Connection     ${XT_url}
