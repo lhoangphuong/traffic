@@ -1,137 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.1 (Python 3.7.3 on win32)" generated="20190626 15:06:46.029" rpa="false">
-<suite id="s1" name="TC002 6k-TE global" source="C:\traffic\testcase\TC002_6k-TE_global.robot">
-<test id="s1-t1" name="1 |---&gt;webRTC call">
-<kw name="Start webRTC call">
+<robot generator="Robot 3.1.1 (Python 3.7.3 on win32)" generated="20190626 16:15:31.340" rpa="false">
+<suite id="s1" name="Appium Test" source="C:\traffic\testcase\appium_test.robot">
+<kw name="Open Application" library="AppiumLibrary" type="setup">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
 <arguments>
-<arg>https://${portal_ip}/portal/tenants/default/?ID=${vr_id}***1&amp;autojoin</arg>
+<arg>http://10.128.224.44:4723/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=CU360</arg>
+<arg>udid=19YT01310139</arg>
+<arg>app=F:\\Download\\Google Chrome Fast Secure_v74.0.3729.157_apkpure.com.apk</arg>
+<arg>automationName=uiautomator2</arg>
 </arguments>
-<msg timestamp="20190626 15:06:46.061" level="FAIL">No keyword with name 'Start webRTC call' found.</msg>
-<status status="FAIL" starttime="20190626 15:06:46.061" endtime="20190626 15:06:46.061"></status>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20190626 16:15:32.780" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20190626 16:15:32.775" endtime="20190626 16:15:32.780"></status>
 </kw>
-<status status="FAIL" starttime="20190626 15:06:46.059" endtime="20190626 15:06:46.062" critical="yes">No keyword with name 'Start webRTC call' found.</status>
+<msg timestamp="20190626 16:15:32.781" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20190626 16:15:32.784" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: packageAndLaunchActivityFromManifest failed. Original error: Command 'java -jar C\:\\Users\\lhoangphuong\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-adb\\jars\\appium_apk_tools.jar printLaunchActivity 'F:\\Download\\Google Chrome Fast Secure_v74.0.3729.157_apkpure.com.apk' C\:\\Users\\LHOANG~1\\AppData\\Local\\Temp\\com.android.chrome' exited with code 1; StdErr: Exception in thread "main" brut.androlib.AndrolibException: Multiple res specs: anim/0_resource_name_obfuscated
+	at brut.androlib.res.data.ResType.addResSpec(ResType.java:58)
+	at brut.androlib.res.decoder.ARSCDecoder.readEntry(ARSCDecoder.java:182)
+	at brut.androlib.res.decoder.ARSCDecoder.readConfig(ARSCDecoder.java:157)
+	at brut.androlib.res.decoder.ARSCDecoder.readType(ARSCDecoder.java:125)
+	at brut.androlib.res.decoder.ARSCDecoder.readPackage(ARSCDecoder.java:100)
+	at brut.androlib.res.decoder.ARSCDecoder.readTable(ARSCDecoder.java:78)
+	at brut.androlib.res.decoder.ARSCDecoder.decode(ARSCDecoder.java:47)
+	at brut.androlib.res.AndrolibResources.getResPackagesFromApk(AndrolibResources.java:605)
+	at brut.androlib.res.AndrolibResources.loadMainPkg(AndrolibResources.java:74)
+	at brut.androlib.res.AndrolibResources.getResTable(AndrolibResources.java:66)
+	at io.appium.apktools.AndroidManifestActivityHelper.decodeManifestXML(AndroidManifestActivityHelper.java:26)
+	at io.appium.apktools.Main.main(Main.java:33)
+
+</msg>
+<status status="FAIL" starttime="20190626 16:15:31.517" endtime="20190626 16:15:32.784"></status>
+</kw>
+<test id="s1-t1" name="App Presents the Login Page When Launches">
+<status status="FAIL" starttime="20190626 16:15:32.784" endtime="20190626 16:15:32.784" critical="yes">Parent suite setup failed:
+WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: packageAndLaunchActivityFromManifest failed. Original error: Command 'java -jar C\:\\Users\\lhoangphuong\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-adb\\jars\\appium_apk_tools.jar printLaunchActivity 'F:\\Download\\Google Chrome Fast Secure_v74.0.3729.157_apkpure.com.apk' C\:\\Users\\LHOANG~1\\AppData\\Local\\Temp\\com.android.chrome' exited with code 1; StdErr: Exception in thread "main" brut.androlib.AndrolibException: Multiple res specs: anim/0_resource_name_obfuscated
+	at brut.androlib.res.data.ResType.addResSpec(ResType.java:58)
+	at brut.androlib.res.decoder.ARSCDecoder.readEntry(ARSCDecoder.java:182)
+	at brut.androlib.res.decoder.ARSCDecoder.readConfig(ARSCDecoder.java:157)
+	at brut.androlib.res.decoder.ARSCDecoder.readType(ARSCDecoder.java:125)
+	at brut.androlib.res.decoder.ARSCDecoder.readPackage(ARSCDecoder.java:100)
+	at brut.androlib.res.decoder.ARSCDecoder.readTable(ARSCDecoder.java:78)
+	at brut.androlib.res.decoder.ARSCDecoder.decode(ARSCDecoder.java:47)
+	at brut.androlib.res.AndrolibResources.getResPackagesFromApk(AndrolibResources.java:605)
+	at brut.androlib.res.AndrolibResources.loadMainPkg(AndrolibResources.java:74)
+	at brut.androlib.res.AndrolibResources.getResTable(AndrolibResources.java:66)
+	at io.appium.apktools.AndroidManifestActivityHelper.decodeManifestXML(AndroidManifestActivityHelper.java:26)
+	at io.appium.apktools.Main.main(Main.java:33)
+
+</status>
 </test>
-<test id="s1-t2" name="2 |---&gt;Stop all current XT call">
-<kw name="Stop XT call">
-<msg timestamp="20190626 15:06:46.064" level="FAIL">No keyword with name 'Stop XT call' found.</msg>
-<status status="FAIL" starttime="20190626 15:06:46.064" endtime="20190626 15:06:46.064"></status>
-</kw>
-<status status="FAIL" starttime="20190626 15:06:46.063" endtime="20190626 15:06:46.065" critical="yes">No keyword with name 'Stop XT call' found.</status>
+<test id="s1-t2" name="Move To Second Screen When Username And Password Are Not Empty">
+<status status="FAIL" starttime="20190626 16:15:32.798" endtime="20190626 16:15:32.800" critical="yes">Parent suite setup failed:
+WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: packageAndLaunchActivityFromManifest failed. Original error: Command 'java -jar C\:\\Users\\lhoangphuong\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-adb\\jars\\appium_apk_tools.jar printLaunchActivity 'F:\\Download\\Google Chrome Fast Secure_v74.0.3729.157_apkpure.com.apk' C\:\\Users\\LHOANG~1\\AppData\\Local\\Temp\\com.android.chrome' exited with code 1; StdErr: Exception in thread "main" brut.androlib.AndrolibException: Multiple res specs: anim/0_resource_name_obfuscated
+	at brut.androlib.res.data.ResType.addResSpec(ResType.java:58)
+	at brut.androlib.res.decoder.ARSCDecoder.readEntry(ARSCDecoder.java:182)
+	at brut.androlib.res.decoder.ARSCDecoder.readConfig(ARSCDecoder.java:157)
+	at brut.androlib.res.decoder.ARSCDecoder.readType(ARSCDecoder.java:125)
+	at brut.androlib.res.decoder.ARSCDecoder.readPackage(ARSCDecoder.java:100)
+	at brut.androlib.res.decoder.ARSCDecoder.readTable(ARSCDecoder.java:78)
+	at brut.androlib.res.decoder.ARSCDecoder.decode(ARSCDecoder.java:47)
+	at brut.androlib.res.AndrolibResources.getResPackagesFromApk(AndrolibResources.java:605)
+	at brut.androlib.res.AndrolibResources.loadMainPkg(AndrolibResources.java:74)
+	at brut.androlib.res.AndrolibResources.getResTable(AndrolibResources.java:66)
+	at io.appium.apktools.AndroidManifestActivityHelper.decodeManifestXML(AndroidManifestActivityHelper.java:26)
+	at io.appium.apktools.Main.main(Main.java:33)
+
+</status>
 </test>
-<test id="s1-t3" name="3 |---&gt;XT 5000 call">
-<kw name="Start XT call">
-<arguments>
-<arg>10.102.4.86</arg>
-<arg>${vr_id}</arg>
-</arguments>
-<msg timestamp="20190626 15:06:46.068" level="FAIL">No keyword with name 'Start XT call' found.</msg>
-<status status="FAIL" starttime="20190626 15:06:46.068" endtime="20190626 15:06:46.068"></status>
-</kw>
-<status status="FAIL" starttime="20190626 15:06:46.066" endtime="20190626 15:06:46.068" critical="yes">No keyword with name 'Start XT call' found.</status>
+<test id="s1-t3" name="Show Login Failed If Username Or Password IS Empty">
+<status status="FAIL" starttime="20190626 16:15:32.816" endtime="20190626 16:15:32.816" critical="yes">Parent suite setup failed:
+WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: packageAndLaunchActivityFromManifest failed. Original error: Command 'java -jar C\:\\Users\\lhoangphuong\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-adb\\jars\\appium_apk_tools.jar printLaunchActivity 'F:\\Download\\Google Chrome Fast Secure_v74.0.3729.157_apkpure.com.apk' C\:\\Users\\LHOANG~1\\AppData\\Local\\Temp\\com.android.chrome' exited with code 1; StdErr: Exception in thread "main" brut.androlib.AndrolibException: Multiple res specs: anim/0_resource_name_obfuscated
+	at brut.androlib.res.data.ResType.addResSpec(ResType.java:58)
+	at brut.androlib.res.decoder.ARSCDecoder.readEntry(ARSCDecoder.java:182)
+	at brut.androlib.res.decoder.ARSCDecoder.readConfig(ARSCDecoder.java:157)
+	at brut.androlib.res.decoder.ARSCDecoder.readType(ARSCDecoder.java:125)
+	at brut.androlib.res.decoder.ARSCDecoder.readPackage(ARSCDecoder.java:100)
+	at brut.androlib.res.decoder.ARSCDecoder.readTable(ARSCDecoder.java:78)
+	at brut.androlib.res.decoder.ARSCDecoder.decode(ARSCDecoder.java:47)
+	at brut.androlib.res.AndrolibResources.getResPackagesFromApk(AndrolibResources.java:605)
+	at brut.androlib.res.AndrolibResources.loadMainPkg(AndrolibResources.java:74)
+	at brut.androlib.res.AndrolibResources.getResTable(AndrolibResources.java:66)
+	at io.appium.apktools.AndroidManifestActivityHelper.decodeManifestXML(AndroidManifestActivityHelper.java:26)
+	at io.appium.apktools.Main.main(Main.java:33)
+
+</status>
 </test>
-<test id="s1-t4" name="4 |---&gt;XT5000 become moderator">
-<kw name="XT become moderator">
-<arguments>
-<arg>10.102.4.86</arg>
-</arguments>
-<msg timestamp="20190626 15:06:46.070" level="FAIL">No keyword with name 'XT become moderator' found.</msg>
-<status status="FAIL" starttime="20190626 15:06:46.070" endtime="20190626 15:06:46.071"></status>
+<kw name="Close Application" library="AppiumLibrary" type="teardown">
+<doc>Closes the current application and also close webdriver session.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20190626 16:15:32.834" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20190626 16:15:32.832" endtime="20190626 16:15:32.834"></status>
 </kw>
-<status status="FAIL" starttime="20190626 15:06:46.069" endtime="20190626 15:06:46.071" critical="yes">No keyword with name 'XT become moderator' found.</status>
-</test>
-<test id="s1-t5" name="5 |---&gt;XT5000 lock meeting">
-<kw name="XT lock meeting">
-<arguments>
-<arg>10.102.4.86</arg>
-</arguments>
-<msg timestamp="20190626 15:06:46.073" level="FAIL">No keyword with name 'XT lock meeting' found.</msg>
-<status status="FAIL" starttime="20190626 15:06:46.073" endtime="20190626 15:06:46.073"></status>
+<msg timestamp="20190626 16:15:32.835" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20190626 16:15:32.850" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20190626 16:15:32.832" endtime="20190626 16:15:32.850">No application is open</status>
 </kw>
-<status status="FAIL" starttime="20190626 15:06:46.072" endtime="20190626 15:06:46.074" critical="yes">No keyword with name 'XT lock meeting' found.</status>
-</test>
-<test id="s1-t6" name="6 |---&gt;XT4300 call">
-<kw name="Start XT call">
-<arguments>
-<arg>10.102.4.76</arg>
-<arg>${vr_id}</arg>
-</arguments>
-<msg timestamp="20190626 15:06:46.076" level="FAIL">No keyword with name 'Start XT call' found.</msg>
-<status status="FAIL" starttime="20190626 15:06:46.076" endtime="20190626 15:06:46.076"></status>
-</kw>
-<status status="FAIL" starttime="20190626 15:06:46.075" endtime="20190626 15:06:46.077" critical="yes">No keyword with name 'Start XT call' found.</status>
-</test>
-<test id="s1-t7" name="7 |---&gt;XT4300 request to join the meeting">
-<kw name="XT request">
-<arguments>
-<arg>10.102.4.76</arg>
-</arguments>
-<msg timestamp="20190626 15:06:46.087" level="FAIL">No keyword with name 'XT request' found.</msg>
-<status status="FAIL" starttime="20190626 15:06:46.087" endtime="20190626 15:06:46.087"></status>
-</kw>
-<status status="FAIL" starttime="20190626 15:06:46.085" endtime="20190626 15:06:46.088" critical="yes">No keyword with name 'XT request' found.</status>
-</test>
-<test id="s1-t8" name="8 |---&gt;XT5000 accept">
-<kw name="XT accept">
-<arguments>
-<arg>10.102.4.86</arg>
-</arguments>
-<msg timestamp="20190626 15:06:46.091" level="FAIL">No keyword with name 'XT accept' found.</msg>
-<status status="FAIL" starttime="20190626 15:06:46.091" endtime="20190626 15:06:46.091"></status>
-</kw>
-<status status="FAIL" starttime="20190626 15:06:46.090" endtime="20190626 15:06:46.092" critical="yes">No keyword with name 'XT accept' found.</status>
-</test>
-<test id="s1-t9" name="9 |---&gt;XT5000 unlock meeting">
-<kw name="XT lock meeting">
-<arguments>
-<arg>10.102.4.86</arg>
-</arguments>
-<msg timestamp="20190626 15:06:46.102" level="FAIL">No keyword with name 'XT lock meeting' found.</msg>
-<status status="FAIL" starttime="20190626 15:06:46.102" endtime="20190626 15:06:46.102"></status>
-</kw>
-<status status="FAIL" starttime="20190626 15:06:46.100" endtime="20190626 15:06:46.103" critical="yes">No keyword with name 'XT lock meeting' found.</status>
-</test>
-<test id="s1-t10" name="10|---&gt;Start SIP call">
-<kw name="Start SIP call">
-<arguments>
-<arg>${system_ip}</arg>
-<arg>${vr_id}</arg>
-<arg>10</arg>
-</arguments>
-<msg timestamp="20190626 15:06:46.107" level="FAIL">No keyword with name 'Start SIP call' found.</msg>
-<status status="FAIL" starttime="20190626 15:06:46.107" endtime="20190626 15:06:46.107"></status>
-</kw>
-<status status="FAIL" starttime="20190626 15:06:46.104" endtime="20190626 15:06:46.107" critical="yes">No keyword with name 'Start SIP call' found.</status>
-</test>
-<test id="s1-t11" name="11|---&gt;XT5000 terminate meeting">
-<kw name="XT terminate meeting">
-<arguments>
-<arg>10.102.4.86</arg>
-</arguments>
-<msg timestamp="20190626 15:06:46.111" level="FAIL">No keyword with name 'XT terminate meeting' found.</msg>
-<status status="FAIL" starttime="20190626 15:06:46.111" endtime="20190626 15:06:46.111"></status>
-</kw>
-<status status="FAIL" starttime="20190626 15:06:46.109" endtime="20190626 15:06:46.118" critical="yes">No keyword with name 'XT terminate meeting' found.</status>
-</test>
-<kw name="Close all browsers" type="teardown">
-<msg timestamp="20190626 15:06:46.122" level="FAIL">No keyword with name 'Close all browsers' found.</msg>
-<status status="FAIL" starttime="20190626 15:06:46.122" endtime="20190626 15:06:46.123">No keyword with name 'Close all browsers' found.</status>
-</kw>
-<status status="FAIL" starttime="20190626 15:06:46.030" endtime="20190626 15:06:46.123">Suite teardown failed:
-No keyword with name 'Close all browsers' found.</status>
+<status status="FAIL" starttime="20190626 16:15:31.341" endtime="20190626 16:15:32.850">Suite setup failed:
+WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: packageAndLaunchActivityFromManifest failed. Original error: Command 'java -jar C\:\\Users\\lhoangphuong\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-adb\\jars\\appium_apk_tools.jar printLaunchActivity 'F:\\Download\\Google Chrome Fast Secure_v74.0.3729.157_apkpure.com.apk' C\:\\Users\\LHOANG~1\\AppData\\Local\\Temp\\com.android.chrome' exited with code 1; StdErr: Exception in thread "main" brut.androlib.AndrolibException: Multiple res specs: anim/0_resource_name_obfuscated
+	at brut.androlib.res.data.ResType.addResSpec(ResType.java:58)
+	at brut.androlib.res.decoder.ARSCDecoder.readEntry(ARSCDecoder.java:182)
+	at brut.androlib.res.decoder.ARSCDecoder.readConfig(ARSCDecoder.java:157)
+	at brut.androlib.res.decoder.ARSCDecoder.readType(ARSCDecoder.java:125)
+	at brut.androlib.res.decoder.ARSCDecoder.readPackage(ARSCDecoder.java:100)
+	at brut.androlib.res.decoder.ARSCDecoder.readTable(ARSCDecoder.java:78)
+	at brut.androlib.res.decoder.ARSCDecoder.decode(ARSCDecoder.java:47)
+	at brut.androlib.res.AndrolibResources.getResPackagesFromApk(AndrolibResources.java:605)
+	at brut.androlib.res.AndrolibResources.loadMainPkg(AndrolibResources.java:74)
+	at brut.androlib.res.AndrolibResources.getResTable(AndrolibResources.java:66)
+	at io.appium.apktools.AndroidManifestActivityHelper.decodeManifestXML(AndroidManifestActivityHelper.java:26)
+	at io.appium.apktools.Main.main(Main.java:33)
+
+
+
+Also suite teardown failed:
+No application is open</status>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="11">Critical Tests</stat>
-<stat pass="0" fail="11">All Tests</stat>
+<stat pass="0" fail="3">Critical Tests</stat>
+<stat pass="0" fail="3">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="11" id="s1" name="TC002 6k-TE global">TC002 6k-TE global</stat>
+<stat pass="0" fail="3" id="s1" name="Appium Test">Appium Test</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20190626 15:06:46.053" level="ERROR">Error in file 'C:\traffic\testcase\TC002_6k-TE_global.robot': Resource file '\root\tmp\resource\portal.robot' does not exist.</msg>
-<msg timestamp="20190626 15:06:46.054" level="ERROR">Error in file 'C:\traffic\testcase\TC002_6k-TE_global.robot': Resource file '\root\tmp\resource\XT.robot' does not exist.</msg>
+<msg timestamp="20190626 16:15:32.781" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20190626 16:15:32.835" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
 </errors>
 </robot>
