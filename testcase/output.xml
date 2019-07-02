@@ -1,67 +1,1017 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.1 (Python 3.7.3 on win32)" generated="20190626 18:44:07.350" rpa="false">
-<suite id="s1" name="Appium Test" source="C:\traffic\testcase\appium_test.robot">
-<kw name="Open Application" library="AppiumLibrary" type="setup">
-<doc>Opens a new application to given Appium server.
-Capabilities of appium server, Android and iOS,
-Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
-| *Option*            | *Man.* | *Description*     |
-| remote_url          | Yes    | Appium server url |
-| alias               | no     | alias             |</doc>
+<robot rpa="false" generated="20190702 03:18:07.909" generator="Robot 3.1.1 (Python 2.7.15rc1 on linux2)">
+<suite source="/root/tmp/testcase/XT_join.robot" id="s1" name="XT join">
+<test id="s1-t1" name="1 |---&gt;Stop XT call">
+<kw name="Stop XT call" library="XT">
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
 <arguments>
-<arg>://localhost:4723/wd/hub</arg>
-<arg>platformName=Android</arg>
-<arg>deviceName=Cu360</arg>
-<arg>udid=19YT01310139</arg>
-<arg>appPackage=com.avaya.vdocom</arg>
-<arg>appActivity=com.avaya.vdocom.MainActivity</arg>
+<arg>10.102.4.86</arg>
 </arguments>
-<kw name="Capture Page Screenshot" library="AppiumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20190626 18:44:14.098" level="FAIL">No application is open</msg>
-<status status="FAIL" starttime="20190626 18:44:14.096" endtime="20190626 18:44:14.098"></status>
+<status status="PASS" endtime="20190702 03:18:07.983" starttime="20190702 03:18:07.983"></status>
 </kw>
-<msg timestamp="20190626 18:44:14.098" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
-<msg timestamp="20190626 18:44:14.100" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'F\:\\Extract\\sdk\\platform-tools\\adb.exe -P 5037 -s 19YT01310139 shell pm clear com.avaya.vdocom' exited with code 1'; Stderr: 'Error: java.lang.SecurityException: Cannot clear data for a protected package: com.avaya.vdocom'; Code: '1'
-</msg>
-<status status="FAIL" starttime="20190626 18:44:07.529" endtime="20190626 18:44:14.101"></status>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<arguments>
+<arg>atadmin</arg>
+<arg>1234</arg>
+</arguments>
+<msg timestamp="20190702 03:18:07.983" level="INFO">Logging into '10.102.4.86:22' as 'atadmin'.</msg>
+<msg timestamp="20190702 03:18:14.298" level="INFO">Read output: Last login: Tue Jul  2 10:12:52 2019 from 10.128.224.44
+
+
+=============================================================================
+-atsh-0.0.1
+=============================================================================
+ATSH&gt;</msg>
+<status status="PASS" endtime="20190702 03:18:14.298" starttime="20190702 03:18:07.983"></status>
 </kw>
-<test id="s1-t1" name="Click call">
-<status status="FAIL" starttime="20190626 18:44:14.101" endtime="20190626 18:44:14.101" critical="yes">Parent suite setup failed:
-WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'F\:\\Extract\\sdk\\platform-tools\\adb.exe -P 5037 -s 19YT01310139 shell pm clear com.avaya.vdocom' exited with code 1'; Stderr: 'Error: java.lang.SecurityException: Cannot clear data for a protected package: com.avaya.vdocom'; Code: '1'
-</status>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;IPV</arg>
+</arguments>
+<msg timestamp="20190702 03:18:14.307" level="INFO">AT[&amp;IPV</msg>
+<status status="PASS" endtime="20190702 03:18:14.307" starttime="20190702 03:18:14.298"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CH1</arg>
+</arguments>
+<msg timestamp="20190702 03:18:14.308" level="INFO">ATSH&gt; AT[&lt;IP401C9XT5000-09.02.00.0215</msg>
+<status status="PASS" endtime="20190702 03:18:14.308" starttime="20190702 03:18:14.308"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190702 03:18:16.309" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190702 03:18:16.309" starttime="20190702 03:18:14.308"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20190702 03:18:16.373" starttime="20190702 03:18:16.309"></status>
+</kw>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<arguments>
+<arg>10.102.4.76</arg>
+</arguments>
+<status status="PASS" endtime="20190702 03:18:16.374" starttime="20190702 03:18:16.374"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<arguments>
+<arg>atadmin</arg>
+<arg>1234</arg>
+</arguments>
+<msg timestamp="20190702 03:18:16.374" level="INFO">Logging into '10.102.4.76:22' as 'atadmin'.</msg>
+<msg timestamp="20190702 03:18:22.640" level="INFO">Read output: Last login: Tue Jul  2 10:13:23 2019 from 10.128.224.44
+
+
+=============================================================================
+-atsh-0.0.1
+=============================================================================
+ATSH&gt;</msg>
+<status status="PASS" endtime="20190702 03:18:22.640" starttime="20190702 03:18:16.374"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;IPV</arg>
+</arguments>
+<msg timestamp="20190702 03:18:22.651" level="INFO">AT[&amp;IPV</msg>
+<status status="PASS" endtime="20190702 03:18:22.651" starttime="20190702 03:18:22.640"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CH1</arg>
+</arguments>
+<msg timestamp="20190702 03:18:22.652" level="INFO">ATSH&gt; AT[&lt;IP401C9XT5000-09.02.00.0215</msg>
+<status status="PASS" endtime="20190702 03:18:22.652" starttime="20190702 03:18:22.651"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190702 03:18:24.653" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190702 03:18:24.653" starttime="20190702 03:18:22.652"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20190702 03:18:24.718" starttime="20190702 03:18:24.653"></status>
+</kw>
+<status status="PASS" endtime="20190702 03:18:24.718" starttime="20190702 03:18:07.982"></status>
+</kw>
+<status status="PASS" endtime="20190702 03:18:24.718" critical="yes" starttime="20190702 03:18:07.982"></status>
 </test>
-<kw name="Close Application" library="AppiumLibrary" type="teardown">
-<doc>Closes the current application and also close webdriver session.</doc>
-<kw name="Capture Page Screenshot" library="AppiumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20190626 18:44:14.106" level="FAIL">No application is open</msg>
-<status status="FAIL" starttime="20190626 18:44:14.105" endtime="20190626 18:44:14.106"></status>
+<test id="s1-t2" name="2 |---&gt;XT call">
+<kw name="Start XT call" library="XT">
+<arguments>
+<arg>10.102.4.76</arg>
+<arg>${vr_id1}</arg>
+</arguments>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<arguments>
+<arg>${XT_url}</arg>
+</arguments>
+<status status="PASS" endtime="20190702 03:18:24.720" starttime="20190702 03:18:24.719"></status>
 </kw>
-<msg timestamp="20190626 18:44:14.107" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
-<msg timestamp="20190626 18:44:14.108" level="FAIL">No application is open</msg>
-<status status="FAIL" starttime="20190626 18:44:14.104" endtime="20190626 18:44:14.108">No application is open</status>
-</kw>
-<status status="FAIL" starttime="20190626 18:44:07.351" endtime="20190626 18:44:14.109">Suite setup failed:
-WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'F\:\\Extract\\sdk\\platform-tools\\adb.exe -P 5037 -s 19YT01310139 shell pm clear com.avaya.vdocom' exited with code 1'; Stderr: 'Error: java.lang.SecurityException: Cannot clear data for a protected package: com.avaya.vdocom'; Code: '1'
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<arguments>
+<arg>atadmin</arg>
+<arg>1234</arg>
+</arguments>
+<msg timestamp="20190702 03:18:24.720" level="INFO">Logging into '10.102.4.76:22' as 'atadmin'.</msg>
+<msg timestamp="20190702 03:18:30.878" level="INFO">Read output: Last login: Tue Jul  2 10:18:55 2019 from 10.128.224.44
 
 
-Also suite teardown failed:
-No application is open</status>
+=============================================================================
+-atsh-0.0.1
+=============================================================================
+ATSH&gt;</msg>
+<status status="PASS" endtime="20190702 03:18:30.878" starttime="20190702 03:18:24.720"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;IPV</arg>
+</arguments>
+<msg timestamp="20190702 03:18:30.891" level="INFO">AT[&amp;IPV</msg>
+<status status="PASS" endtime="20190702 03:18:30.891" starttime="20190702 03:18:30.878"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CD186${vr_id}</arg>
+</arguments>
+<msg timestamp="20190702 03:18:30.892" level="INFO">ATSH&gt; AT[&lt;IP401C9XT5000-09.02.00.0215</msg>
+<status status="PASS" endtime="20190702 03:18:30.892" starttime="20190702 03:18:30.891"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190702 03:18:32.893" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190702 03:18:32.893" starttime="20190702 03:18:30.892"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20190702 03:18:32.957" starttime="20190702 03:18:32.893"></status>
+</kw>
+<status status="PASS" endtime="20190702 03:18:32.958" starttime="20190702 03:18:24.719"></status>
+</kw>
+<kw name="XT become moderator" library="XT">
+<arguments>
+<arg>10.102.4.76</arg>
+</arguments>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<arguments>
+<arg>${XT_url}</arg>
+</arguments>
+<status status="PASS" endtime="20190702 03:18:32.959" starttime="20190702 03:18:32.958"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<arguments>
+<arg>atadmin</arg>
+<arg>1234</arg>
+</arguments>
+<msg timestamp="20190702 03:18:32.959" level="INFO">Logging into '10.102.4.76:22' as 'atadmin'.</msg>
+<msg timestamp="20190702 03:18:39.205" level="INFO">Read output: Last login: Tue Jul  2 10:19:03 2019 from 10.128.224.44
+
+
+=============================================================================
+-atsh-0.0.1
+=============================================================================
+ATSH&gt;</msg>
+<status status="PASS" endtime="20190702 03:18:39.205" starttime="20190702 03:18:32.959"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;IPV</arg>
+</arguments>
+<msg timestamp="20190702 03:18:39.217" level="INFO">AT[&amp;IPV</msg>
+<status status="PASS" endtime="20190702 03:18:39.217" starttime="20190702 03:18:39.205"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CF*</arg>
+</arguments>
+<msg timestamp="20190702 03:18:39.218" level="INFO">ATSH&gt; AT[&lt;IP401C9XT5000-09.02.00.0215</msg>
+<status status="PASS" endtime="20190702 03:18:39.218" starttime="20190702 03:18:39.217"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190702 03:18:40.218" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20190702 03:18:40.219" starttime="20190702 03:18:39.218"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CF1</arg>
+</arguments>
+<msg timestamp="20190702 03:18:40.220" level="INFO">AT[&amp;CF*</msg>
+<status status="PASS" endtime="20190702 03:18:40.221" starttime="20190702 03:18:40.219"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CF1</arg>
+</arguments>
+<msg timestamp="20190702 03:18:40.222" level="INFO">ATSH&gt; OK</msg>
+<status status="PASS" endtime="20190702 03:18:40.222" starttime="20190702 03:18:40.221"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CF#</arg>
+</arguments>
+<msg timestamp="20190702 03:18:40.223" level="INFO">OK</msg>
+<status status="PASS" endtime="20190702 03:18:40.223" starttime="20190702 03:18:40.222"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190702 03:18:41.224" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20190702 03:18:41.224" starttime="20190702 03:18:40.223"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CF#</arg>
+</arguments>
+<msg timestamp="20190702 03:18:41.225" level="INFO">AT[&amp;CF1</msg>
+<status status="PASS" endtime="20190702 03:18:41.225" starttime="20190702 03:18:41.224"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190702 03:18:42.226" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20190702 03:18:42.226" starttime="20190702 03:18:41.225"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20190702 03:18:42.259" starttime="20190702 03:18:42.226"></status>
+</kw>
+<status status="PASS" endtime="20190702 03:18:42.259" starttime="20190702 03:18:32.958"></status>
+</kw>
+<kw name="Start XT call" library="XT">
+<arguments>
+<arg>10.102.4.86</arg>
+<arg>${vr_id1}</arg>
+</arguments>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<arguments>
+<arg>${XT_url}</arg>
+</arguments>
+<status status="PASS" endtime="20190702 03:18:42.260" starttime="20190702 03:18:42.260"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<arguments>
+<arg>atadmin</arg>
+<arg>1234</arg>
+</arguments>
+<msg timestamp="20190702 03:18:42.261" level="INFO">Logging into '10.102.4.86:22' as 'atadmin'.</msg>
+<msg timestamp="20190702 03:18:48.423" level="INFO">Read output: Last login: Tue Jul  2 10:18:24 2019 from 10.128.224.44
+
+
+=============================================================================
+-atsh-0.0.1
+=============================================================================
+ATSH&gt;</msg>
+<status status="PASS" endtime="20190702 03:18:48.424" starttime="20190702 03:18:42.261"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;IPV</arg>
+</arguments>
+<msg timestamp="20190702 03:18:48.432" level="INFO">AT[&amp;IPV</msg>
+<status status="PASS" endtime="20190702 03:18:48.432" starttime="20190702 03:18:48.424"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CD186${vr_id}</arg>
+</arguments>
+<msg timestamp="20190702 03:18:48.433" level="INFO">ATSH&gt; AT[&lt;IP401C9XT5000-09.02.00.0215</msg>
+<status status="PASS" endtime="20190702 03:18:48.433" starttime="20190702 03:18:48.432"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190702 03:18:50.434" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190702 03:18:50.434" starttime="20190702 03:18:48.434"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20190702 03:18:50.549" starttime="20190702 03:18:50.434"></status>
+</kw>
+<status status="PASS" endtime="20190702 03:18:50.549" starttime="20190702 03:18:42.259"></status>
+</kw>
+<kw name="XT become moderator" library="XT">
+<arguments>
+<arg>10.102.4.86</arg>
+</arguments>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<arguments>
+<arg>${XT_url}</arg>
+</arguments>
+<status status="PASS" endtime="20190702 03:18:50.550" starttime="20190702 03:18:50.550"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<arguments>
+<arg>atadmin</arg>
+<arg>1234</arg>
+</arguments>
+<msg timestamp="20190702 03:18:50.550" level="INFO">Logging into '10.102.4.86:22' as 'atadmin'.</msg>
+<msg timestamp="20190702 03:18:56.936" level="INFO">Read output: Last login: Tue Jul  2 10:18:58 2019 from 10.128.224.44
+
+
+=============================================================================
+-atsh-0.0.1
+=============================================================================
+ATSH&gt;</msg>
+<status status="PASS" endtime="20190702 03:18:56.936" starttime="20190702 03:18:50.550"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;IPV</arg>
+</arguments>
+<msg timestamp="20190702 03:18:56.947" level="INFO">AT[&amp;IPV</msg>
+<status status="PASS" endtime="20190702 03:18:56.947" starttime="20190702 03:18:56.937"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CF*</arg>
+</arguments>
+<msg timestamp="20190702 03:18:56.948" level="INFO">ATSH&gt; AT[&lt;IP401C9XT5000-09.02.00.0215</msg>
+<status status="PASS" endtime="20190702 03:18:56.948" starttime="20190702 03:18:56.947"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190702 03:18:57.949" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20190702 03:18:57.949" starttime="20190702 03:18:56.948"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CF1</arg>
+</arguments>
+<msg timestamp="20190702 03:18:57.950" level="INFO">AT[&amp;CF*</msg>
+<status status="PASS" endtime="20190702 03:18:57.950" starttime="20190702 03:18:57.949"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CF1</arg>
+</arguments>
+<msg timestamp="20190702 03:18:57.952" level="INFO">ATSH&gt; OK</msg>
+<status status="PASS" endtime="20190702 03:18:57.952" starttime="20190702 03:18:57.951"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CF#</arg>
+</arguments>
+<msg timestamp="20190702 03:18:57.952" level="INFO">OK</msg>
+<status status="PASS" endtime="20190702 03:18:57.953" starttime="20190702 03:18:57.952"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190702 03:18:58.953" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20190702 03:18:58.954" starttime="20190702 03:18:57.953"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CF#</arg>
+</arguments>
+<msg timestamp="20190702 03:18:58.954" level="INFO">AT[&amp;CF1</msg>
+<status status="PASS" endtime="20190702 03:18:58.954" starttime="20190702 03:18:58.954"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190702 03:18:59.955" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20190702 03:18:59.955" starttime="20190702 03:18:58.954"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20190702 03:18:59.972" starttime="20190702 03:18:59.956"></status>
+</kw>
+<status status="PASS" endtime="20190702 03:18:59.973" starttime="20190702 03:18:50.549"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>30</arg>
+</arguments>
+<msg timestamp="20190702 03:19:29.974" level="INFO">Slept 30 seconds</msg>
+<status status="PASS" endtime="20190702 03:19:29.975" starttime="20190702 03:18:59.973"></status>
+</kw>
+<status status="PASS" endtime="20190702 03:19:29.978" critical="yes" starttime="20190702 03:18:24.718"></status>
+</test>
+<test id="s1-t3" name="3 |---&gt;Stop XT call">
+<kw name="Stop XT call" library="XT">
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<arguments>
+<arg>10.102.4.86</arg>
+</arguments>
+<status status="PASS" endtime="20190702 03:19:29.981" starttime="20190702 03:19:29.980"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<arguments>
+<arg>atadmin</arg>
+<arg>1234</arg>
+</arguments>
+<msg timestamp="20190702 03:19:29.981" level="INFO">Logging into '10.102.4.86:22' as 'atadmin'.</msg>
+<msg timestamp="20190702 03:19:36.245" level="INFO">Read output: Last login: Tue Jul  2 10:19:06 2019 from 10.128.224.44
+
+
+=============================================================================
+-atsh-0.0.1
+=============================================================================
+ATSH&gt;</msg>
+<status status="PASS" endtime="20190702 03:19:36.246" starttime="20190702 03:19:29.981"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;IPV</arg>
+</arguments>
+<msg timestamp="20190702 03:19:36.259" level="INFO">AT[&amp;IPV</msg>
+<status status="PASS" endtime="20190702 03:19:36.259" starttime="20190702 03:19:36.246"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CH1</arg>
+</arguments>
+<msg timestamp="20190702 03:19:36.262" level="INFO">ATSH&gt; AT[&lt;IP401C9XT5000-09.02.00.0215</msg>
+<status status="PASS" endtime="20190702 03:19:36.262" starttime="20190702 03:19:36.259"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190702 03:19:38.263" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190702 03:19:38.263" starttime="20190702 03:19:36.262"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20190702 03:19:38.327" starttime="20190702 03:19:38.263"></status>
+</kw>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<arguments>
+<arg>10.102.4.76</arg>
+</arguments>
+<status status="PASS" endtime="20190702 03:19:38.328" starttime="20190702 03:19:38.328"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<arguments>
+<arg>atadmin</arg>
+<arg>1234</arg>
+</arguments>
+<msg timestamp="20190702 03:19:38.328" level="INFO">Logging into '10.102.4.76:22' as 'atadmin'.</msg>
+<msg timestamp="20190702 03:19:44.533" level="INFO">Read output: Last login: Tue Jul  2 10:19:11 2019 from 10.128.224.44
+
+
+=============================================================================
+-atsh-0.0.1
+=============================================================================
+ATSH&gt;</msg>
+<status status="PASS" endtime="20190702 03:19:44.534" starttime="20190702 03:19:38.328"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;IPV</arg>
+</arguments>
+<msg timestamp="20190702 03:19:44.546" level="INFO">AT[&amp;IPV</msg>
+<status status="PASS" endtime="20190702 03:19:44.546" starttime="20190702 03:19:44.534"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CH1</arg>
+</arguments>
+<msg timestamp="20190702 03:19:44.547" level="INFO">ATSH&gt; AT[&lt;IP401C9XT5000-09.02.00.0215</msg>
+<status status="PASS" endtime="20190702 03:19:44.547" starttime="20190702 03:19:44.547"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190702 03:19:46.548" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190702 03:19:46.548" starttime="20190702 03:19:44.547"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20190702 03:19:46.614" starttime="20190702 03:19:46.549"></status>
+</kw>
+<status status="PASS" endtime="20190702 03:19:46.614" starttime="20190702 03:19:29.980"></status>
+</kw>
+<status status="PASS" endtime="20190702 03:19:46.614" critical="yes" starttime="20190702 03:19:29.979"></status>
+</test>
+<test id="s1-t4" name="4 |---&gt;XT call">
+<kw name="Start XT call" library="XT">
+<arguments>
+<arg>10.102.4.76</arg>
+<arg>${vr_id2}</arg>
+</arguments>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<arguments>
+<arg>${XT_url}</arg>
+</arguments>
+<status status="PASS" endtime="20190702 03:19:46.615" starttime="20190702 03:19:46.615"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<arguments>
+<arg>atadmin</arg>
+<arg>1234</arg>
+</arguments>
+<msg timestamp="20190702 03:19:46.616" level="INFO">Logging into '10.102.4.76:22' as 'atadmin'.</msg>
+<msg timestamp="20190702 03:19:52.870" level="INFO">Read output: Last login: Tue Jul  2 10:20:16 2019 from 10.128.224.44
+
+
+=============================================================================
+-atsh-0.0.1
+=============================================================================
+ATSH&gt;</msg>
+<status status="PASS" endtime="20190702 03:19:52.870" starttime="20190702 03:19:46.615"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;IPV</arg>
+</arguments>
+<msg timestamp="20190702 03:19:52.882" level="INFO">AT[&amp;IPV</msg>
+<status status="PASS" endtime="20190702 03:19:52.882" starttime="20190702 03:19:52.871"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CD186${vr_id}</arg>
+</arguments>
+<msg timestamp="20190702 03:19:52.883" level="INFO">ATSH&gt; AT[&lt;IP401C9XT5000-09.02.00.0215</msg>
+<status status="PASS" endtime="20190702 03:19:52.883" starttime="20190702 03:19:52.882"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190702 03:19:54.884" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190702 03:19:54.884" starttime="20190702 03:19:52.883"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20190702 03:19:54.999" starttime="20190702 03:19:54.884"></status>
+</kw>
+<status status="PASS" endtime="20190702 03:19:54.999" starttime="20190702 03:19:46.615"></status>
+</kw>
+<kw name="XT become moderator" library="XT">
+<arguments>
+<arg>10.102.4.76</arg>
+</arguments>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<arguments>
+<arg>${XT_url}</arg>
+</arguments>
+<status status="PASS" endtime="20190702 03:19:55.000" starttime="20190702 03:19:54.999"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<arguments>
+<arg>atadmin</arg>
+<arg>1234</arg>
+</arguments>
+<msg timestamp="20190702 03:19:55.000" level="INFO">Logging into '10.102.4.76:22' as 'atadmin'.</msg>
+<msg timestamp="20190702 03:20:01.777" level="INFO">Read output: Last login: Tue Jul  2 10:20:25 2019 from 10.128.224.44
+
+
+=============================================================================
+-atsh-0.0.1
+=============================================================================
+ATSH&gt;</msg>
+<status status="PASS" endtime="20190702 03:20:01.777" starttime="20190702 03:19:55.000"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;IPV</arg>
+</arguments>
+<msg timestamp="20190702 03:20:01.795" level="INFO">AT[&amp;IPV</msg>
+<status status="PASS" endtime="20190702 03:20:01.795" starttime="20190702 03:20:01.778"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CF*</arg>
+</arguments>
+<msg timestamp="20190702 03:20:01.797" level="INFO">ATSH&gt; AT[&lt;IP401C9XT5000-09.02.00.0215</msg>
+<status status="PASS" endtime="20190702 03:20:01.797" starttime="20190702 03:20:01.795"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190702 03:20:02.797" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20190702 03:20:02.798" starttime="20190702 03:20:01.797"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CF1</arg>
+</arguments>
+<msg timestamp="20190702 03:20:02.798" level="INFO">AT[&amp;CF*</msg>
+<status status="PASS" endtime="20190702 03:20:02.799" starttime="20190702 03:20:02.798"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CF1</arg>
+</arguments>
+<msg timestamp="20190702 03:20:02.799" level="INFO">ATSH&gt; OK</msg>
+<status status="PASS" endtime="20190702 03:20:02.800" starttime="20190702 03:20:02.799"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CF#</arg>
+</arguments>
+<msg timestamp="20190702 03:20:02.800" level="INFO">OK</msg>
+<status status="PASS" endtime="20190702 03:20:02.800" starttime="20190702 03:20:02.800"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190702 03:20:03.801" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20190702 03:20:03.801" starttime="20190702 03:20:02.800"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CF#</arg>
+</arguments>
+<msg timestamp="20190702 03:20:03.802" level="INFO">AT[&amp;CF1</msg>
+<status status="PASS" endtime="20190702 03:20:03.802" starttime="20190702 03:20:03.801"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190702 03:20:04.802" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20190702 03:20:04.803" starttime="20190702 03:20:03.802"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20190702 03:20:04.819" starttime="20190702 03:20:04.803"></status>
+</kw>
+<status status="PASS" endtime="20190702 03:20:04.819" starttime="20190702 03:19:54.999"></status>
+</kw>
+<kw name="Start XT call" library="XT">
+<arguments>
+<arg>10.102.4.86</arg>
+<arg>${vr_id2}</arg>
+</arguments>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<arguments>
+<arg>${XT_url}</arg>
+</arguments>
+<status status="PASS" endtime="20190702 03:20:04.820" starttime="20190702 03:20:04.820"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<arguments>
+<arg>atadmin</arg>
+<arg>1234</arg>
+</arguments>
+<msg timestamp="20190702 03:20:04.821" level="INFO">Logging into '10.102.4.86:22' as 'atadmin'.</msg>
+<msg timestamp="20190702 03:20:11.092" level="INFO">Read output: Last login: Tue Jul  2 10:19:46 2019 from 10.128.224.44
+
+
+=============================================================================
+-atsh-0.0.1
+=============================================================================
+ATSH&gt;</msg>
+<status status="PASS" endtime="20190702 03:20:11.092" starttime="20190702 03:20:04.820"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;IPV</arg>
+</arguments>
+<msg timestamp="20190702 03:20:11.102" level="INFO">AT[&amp;IPV</msg>
+<status status="PASS" endtime="20190702 03:20:11.102" starttime="20190702 03:20:11.092"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CD186${vr_id}</arg>
+</arguments>
+<msg timestamp="20190702 03:20:11.103" level="INFO">ATSH&gt; AT[&lt;IP401C9XT5000-09.02.00.0215</msg>
+<status status="PASS" endtime="20190702 03:20:11.103" starttime="20190702 03:20:11.102"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190702 03:20:13.104" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190702 03:20:13.104" starttime="20190702 03:20:11.103"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20190702 03:20:13.219" starttime="20190702 03:20:13.104"></status>
+</kw>
+<status status="PASS" endtime="20190702 03:20:13.219" starttime="20190702 03:20:04.819"></status>
+</kw>
+<kw name="XT become moderator" library="XT">
+<arguments>
+<arg>10.102.4.86</arg>
+</arguments>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<arguments>
+<arg>${XT_url}</arg>
+</arguments>
+<status status="PASS" endtime="20190702 03:20:13.220" starttime="20190702 03:20:13.220"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<arguments>
+<arg>atadmin</arg>
+<arg>1234</arg>
+</arguments>
+<msg timestamp="20190702 03:20:13.221" level="INFO">Logging into '10.102.4.86:22' as 'atadmin'.</msg>
+<msg timestamp="20190702 03:20:19.609" level="INFO">Read output: Last login: Tue Jul  2 10:20:21 2019 from 10.128.224.44
+
+
+=============================================================================
+-atsh-0.0.1
+=============================================================================
+ATSH&gt;</msg>
+<status status="PASS" endtime="20190702 03:20:19.609" starttime="20190702 03:20:13.221"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;IPV</arg>
+</arguments>
+<msg timestamp="20190702 03:20:19.625" level="INFO">AT[&amp;IPV</msg>
+<status status="PASS" endtime="20190702 03:20:19.625" starttime="20190702 03:20:19.609"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CF*</arg>
+</arguments>
+<msg timestamp="20190702 03:20:19.629" level="INFO">ATSH&gt; AT[&lt;IP401C9XT5000-09.02.00.0215</msg>
+<status status="PASS" endtime="20190702 03:20:19.630" starttime="20190702 03:20:19.625"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190702 03:20:20.633" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20190702 03:20:20.633" starttime="20190702 03:20:19.631"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CF1</arg>
+</arguments>
+<msg timestamp="20190702 03:20:20.634" level="INFO">AT[&amp;CF*</msg>
+<status status="PASS" endtime="20190702 03:20:20.634" starttime="20190702 03:20:20.633"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CF1</arg>
+</arguments>
+<msg timestamp="20190702 03:20:20.635" level="INFO">ATSH&gt; OK</msg>
+<status status="PASS" endtime="20190702 03:20:20.635" starttime="20190702 03:20:20.634"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CF#</arg>
+</arguments>
+<msg timestamp="20190702 03:20:20.635" level="INFO">OK</msg>
+<status status="PASS" endtime="20190702 03:20:20.635" starttime="20190702 03:20:20.635"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190702 03:20:21.636" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20190702 03:20:21.636" starttime="20190702 03:20:20.636"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CF#</arg>
+</arguments>
+<msg timestamp="20190702 03:20:21.637" level="INFO">AT[&amp;CF1</msg>
+<status status="PASS" endtime="20190702 03:20:21.637" starttime="20190702 03:20:21.637"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190702 03:20:22.638" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20190702 03:20:22.638" starttime="20190702 03:20:21.637"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20190702 03:20:22.654" starttime="20190702 03:20:22.638"></status>
+</kw>
+<status status="PASS" endtime="20190702 03:20:22.654" starttime="20190702 03:20:13.219"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>30</arg>
+</arguments>
+<msg timestamp="20190702 03:20:52.655" level="INFO">Slept 30 seconds</msg>
+<status status="PASS" endtime="20190702 03:20:52.655" starttime="20190702 03:20:22.654"></status>
+</kw>
+<status status="PASS" endtime="20190702 03:20:52.655" critical="yes" starttime="20190702 03:19:46.614"></status>
+</test>
+<test id="s1-t5" name="5 |---&gt;Stop XT call">
+<kw name="Stop XT call" library="XT">
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<arguments>
+<arg>10.102.4.86</arg>
+</arguments>
+<status status="PASS" endtime="20190702 03:20:52.658" starttime="20190702 03:20:52.658"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<arguments>
+<arg>atadmin</arg>
+<arg>1234</arg>
+</arguments>
+<msg timestamp="20190702 03:20:52.659" level="INFO">Logging into '10.102.4.86:22' as 'atadmin'.</msg>
+<msg timestamp="20190702 03:20:58.902" level="INFO">Read output: Last login: Tue Jul  2 10:20:29 2019 from 10.128.224.44
+
+
+=============================================================================
+-atsh-0.0.1
+=============================================================================
+ATSH&gt;</msg>
+<status status="PASS" endtime="20190702 03:20:58.902" starttime="20190702 03:20:52.659"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;IPV</arg>
+</arguments>
+<msg timestamp="20190702 03:20:58.915" level="INFO">AT[&amp;IPV</msg>
+<status status="PASS" endtime="20190702 03:20:58.915" starttime="20190702 03:20:58.903"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CH1</arg>
+</arguments>
+<msg timestamp="20190702 03:20:58.916" level="INFO">ATSH&gt; AT[&lt;IP401C9XT5000-09.02.00.0215</msg>
+<status status="PASS" endtime="20190702 03:20:58.916" starttime="20190702 03:20:58.915"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190702 03:21:00.917" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190702 03:21:00.917" starttime="20190702 03:20:58.916"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20190702 03:21:00.982" starttime="20190702 03:21:00.917"></status>
+</kw>
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<arguments>
+<arg>10.102.4.76</arg>
+</arguments>
+<status status="PASS" endtime="20190702 03:21:00.982" starttime="20190702 03:21:00.982"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<arguments>
+<arg>atadmin</arg>
+<arg>1234</arg>
+</arguments>
+<msg timestamp="20190702 03:21:00.982" level="INFO">Logging into '10.102.4.76:22' as 'atadmin'.</msg>
+<msg timestamp="20190702 03:21:07.255" level="INFO">Read output: Last login: Tue Jul  2 10:20:34 2019 from 10.128.224.44
+
+
+=============================================================================
+-atsh-0.0.1
+=============================================================================
+ATSH&gt;</msg>
+<status status="PASS" endtime="20190702 03:21:07.255" starttime="20190702 03:21:00.982"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;IPV</arg>
+</arguments>
+<msg timestamp="20190702 03:21:07.272" level="INFO">AT[&amp;IPV</msg>
+<status status="PASS" endtime="20190702 03:21:07.273" starttime="20190702 03:21:07.256"></status>
+</kw>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>AT[&amp;CH1</arg>
+</arguments>
+<msg timestamp="20190702 03:21:07.274" level="INFO">ATSH&gt; AT[&lt;IP401C9XT5000-09.02.00.0215</msg>
+<status status="PASS" endtime="20190702 03:21:07.274" starttime="20190702 03:21:07.273"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190702 03:21:09.275" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190702 03:21:09.275" starttime="20190702 03:21:07.274"></status>
+</kw>
+<kw name="Close All Connections" library="SSHLibrary">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20190702 03:21:09.339" starttime="20190702 03:21:09.275"></status>
+</kw>
+<status status="PASS" endtime="20190702 03:21:09.339" starttime="20190702 03:20:52.657"></status>
+</kw>
+<status status="PASS" endtime="20190702 03:21:09.340" critical="yes" starttime="20190702 03:20:52.656"></status>
+</test>
+<status status="PASS" endtime="20190702 03:21:09.340" starttime="20190702 03:18:07.910"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1">Critical Tests</stat>
-<stat pass="0" fail="1">All Tests</stat>
+<stat fail="0" pass="5">Critical Tests</stat>
+<stat fail="0" pass="5">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" id="s1" name="Appium Test">Appium Test</stat>
+<stat fail="0" id="s1" name="XT join" pass="5">XT join</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20190626 18:44:14.098" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
-<msg timestamp="20190626 18:44:14.107" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
 </errors>
 </robot>

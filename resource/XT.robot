@@ -39,8 +39,8 @@ Invite CU360
     Write	AT[&CF0
     Write	AT[&CF2
     Write	AT[&CF1
-    Write	AT[&CF3
-    Write	AT[&CF5
+    Write	AT[&CF1
+    Write	AT[&CF0
     Write	AT[&CF#
     Sleep   1
     Write	AT[&CF#
