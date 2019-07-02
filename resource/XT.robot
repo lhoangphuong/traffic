@@ -114,7 +114,7 @@ Start SIP call
     Open Connection     10.103.2.145
     Login               root        root
     Write   cd /home/SiPp/720p_2M/; ./sipp ${system} -s ${vr_id} -mi 10.103.2.145 -i 10.103.2.145 -sf test.xml -aa -r 1 -rp 1000 -l ${number of call} -inf users.csv
-    Sleep   30
+    Sleep   300
     Write   qq
     Sleep   2
     Close All Connections
