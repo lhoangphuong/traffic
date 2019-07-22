@@ -35,12 +35,12 @@ Invite CU360
     Sleep   1
      Write	AT[&CF8
     Write	AT[&CF2
-    Write	AT[&CF2
     Write	AT[&CF0
-    Write	AT[&CF2
-    Write	AT[&CF1
-    Write	AT[&CF1
     Write	AT[&CF0
+    Write	AT[&CF0
+    Write	AT[&CF0
+    Write	AT[&CF5
+    Write	AT[&CF3
     Write	AT[&CF#
     Sleep   1
     Write	AT[&CF#
@@ -109,12 +109,22 @@ Stop XT call
     #Sleep   2
 	#Close All Connections
 	
+#Start SIP call
+#    [Arguments]         ${system}    ${vr_id}   ${number of call}
+#    Open Connection     10.103.2.145
+#    Login               root        root
+#    Write   cd /home/SiPp/720p_2M/; ./sipp ${system} -s ${vr_id} -mi 10.103.2.145 -i 10.103.2.145 -sf test.xml -aa -r 1 -rp 1000 -l ${number of call} -inf users.csv
+#    Sleep   150
+#    Write   qq
+#    Sleep   2
+#    Close All Connections
+
 Start SIP call
     [Arguments]         ${system}    ${vr_id}   ${number of call}
-    Open Connection     10.103.2.145
-    Login               root        root
-    Write   cd /home/SiPp/720p_2M/; ./sipp ${system} -s ${vr_id} -mi 10.103.2.145 -i 10.103.2.145 -sf test.xml -aa -r 1 -rp 1000 -l ${number of call} -inf users.csv
-    Sleep   300
+    Open Connection     10.103.3.82
+    Login               pmgradmin        password
+    Write   sh /home/sipp/sipp.sh
+    Sleep   60
     Write   qq
     Sleep   2
     Close All Connections

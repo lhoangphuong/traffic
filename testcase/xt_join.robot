@@ -2,9 +2,9 @@
 Resource            /root/tmp/resource/XT.robot
 
 *** Variables ***
-${system_ip}    10.103.2.3
-${vr_id1}        8804101
-${vr_id2}        8804102
+${system_ip}    10.103.3.81
+${vr_id1}        3402410
+${vr_id2}        3402410
 
 *** Test Cases ***
 1 |--->Stop XT call
