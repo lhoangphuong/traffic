@@ -123,7 +123,7 @@ Start SIP call
     [Arguments]         ${system}    ${vr_id}   ${number of call}
     Open Connection     10.103.3.82
     Login               pmgradmin        password
-    Write   sh /home/sipp/sipp.sh
+    Write   cd /home/sipp/; ./sipp.sh
     Sleep   60
     Write   qq
     Sleep   2
