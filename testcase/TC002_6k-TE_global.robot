@@ -4,9 +4,9 @@ Resource            /root/tmp/resource/portal.robot
 Resource            /root/tmp/resource/XT.robot
 
 *** Variables ***
-${system_ip}    10.103.3.81
-${portal_ip}    esg154-fedramp.hcm.com
-${vr_id}        3402410
+${system_ip}    10.103.3.169
+${portal_ip}    10.103.3.169
+${vr_id}        1105555
 ${dc}           default       
 *** Test Cases ***
 1 |--->webRTC call
